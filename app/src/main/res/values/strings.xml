@@ -4,7 +4,13 @@
     <string name="full_name">Full Name</string>
     <string name="register">Register</string>
 
+    <string name="intro">In this task, you will see a series of faces one at a time. Touch the screen when you see a certain kind of facial expression, but to Not touch at other times. \n\n
+    Touch the screen to start</string>
+you the new rules.
 
+    <string name="instruction1">Across the tast, the rules on what facial expression or emotion to respond to will change, and an instruction screen will tell you the new rules.\n\n
+
+    Touch the screen to start.</string>
 
 
 
