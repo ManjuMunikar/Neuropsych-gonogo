@@ -9,6 +9,7 @@
 
     <Button
         android:text="@string/register"
+        android:background="@drawable/purple_border"
         android:layout_width="196dp"
         android:layout_height="57dp"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
@@ -22,15 +23,18 @@
     <EditText
         android:id="@+id/txtUserId"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/purple_border"
+        android:drawableLeft="@drawable/user_id"
         android:ems="10"
         android:hint="@string/user_id"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:paddingLeft="8dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFullName" />
 
@@ -39,15 +43,20 @@
         android:layout_width="wrap_content"
         android:layout_height="52dp"
         android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/purple_border"
+        android:drawableLeft="@drawable/person"
         android:ems="10"
         android:hint="@string/full_name"
         android:inputType="none|textPersonName"
+        android:paddingLeft="8dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/txtUserId"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -26,10 +26,10 @@
         tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/intro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:text="@string/intro"
             android:textColor="@color/purple" />
