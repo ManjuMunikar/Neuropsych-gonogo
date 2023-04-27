@@ -1,4 +1,4 @@
-package com.datagrandeur.neuropsych;
+package com.datagrandeur.gonogo;
 
 import org.junit.Test;
 

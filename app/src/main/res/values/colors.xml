@@ -11,4 +11,11 @@
     <color name="colorPrimaryDark">#1be9cc</color>
     <color name="colorAccent">#D81B60</color>
     <color name="black_overlay">#3a3838</color>
+
+    <color name="purple">#8692f7</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+
 </resources>
