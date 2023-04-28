@@ -4,32 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
     tools:context="com.datagrandeur.gonogo.InstructionActivity1">
     <FrameLayout
-        android:layout_width="410dp"
-        android:layout_height="730dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/instructionAcivity1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/btnInstruction1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/bg"
             android:layout_gravity="center"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/instruction1"
+            android:id="@+id/textViewInstruction1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:text="@string/instruction1"
+            android:textSize="24sp"
+            android:text="@string/textViewInstruction1"
             android:textColor="@color/purple" />
 
 

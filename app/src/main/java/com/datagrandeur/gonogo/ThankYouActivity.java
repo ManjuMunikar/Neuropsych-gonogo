@@ -9,19 +9,19 @@ import android.widget.ImageButton;
 
 import com.example.neuropsych.R;
 
-public class IntroActivity extends AppCompatActivity {
+public class ThankYouActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_thank_you);
 
-        ImageButton btnIntro= findViewById(R.id.btnIntro);
+        ImageButton btnThankYou = findViewById(R.id.btnThankYou);
 
-        btnIntro.setOnClickListener(new View.OnClickListener() {
+        btnThankYou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent (getApplicationContext(),InstructionActivity1.class);
+                Intent intent= new Intent(getApplicationContext(), InstructionActivity2.class);
                 startActivity(intent);
             }
         });
