@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.datagrandeur.gonogo.IntroActivity">
-
+    tools:context="com.datagrandeur.gonogo.StartActivity">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,26 +14,25 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/btnIntro"
+            android:id="@+id/btnStartActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg"
-            android:contentDescription="@string/btnIntro"
+            android:layout_gravity="center"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textViewIntro"
+            android:id="@+id/textViewStart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:textSize="24sp"
-            android:text="@string/textViewIntro"
+            android:textSize="25sp"
+            android:text="@string/textViewStart"
             android:textColor="@color/purple" />
 
 
     </FrameLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

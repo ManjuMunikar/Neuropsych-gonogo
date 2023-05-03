@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.datagrandeur.gonogo.IntroActivity">
-
+    tools:context="com.datagrandeur.gonogo.ThankYouActivity">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,25 +14,23 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/btnIntro"
+            android:id="@+id/btnThankYou"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg"
-            android:contentDescription="@string/btnIntro"
+            android:layout_gravity="center"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textViewIntro"
+            android:id="@+id/textViewThankYou"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:textSize="24sp"
-            android:text="@string/textViewIntro"
+            android:textSize="32sp"
+            android:text="@string/textViewThankYou"
             android:textColor="@color/purple" />
-
-
     </FrameLayout>
 
 
