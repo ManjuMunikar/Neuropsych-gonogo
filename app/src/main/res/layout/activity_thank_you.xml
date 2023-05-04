@@ -23,13 +23,13 @@
             tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textViewThankYou"
+            android:id="@+id/tvThankYou"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:textSize="32sp"
-            android:text="@string/textViewThankYou"
+            android:text="@string/thank_you"
             android:textColor="@color/purple" />
     </FrameLayout>
 
