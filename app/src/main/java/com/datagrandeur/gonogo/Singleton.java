@@ -1,6 +1,10 @@
 package com.datagrandeur.gonogo;
 public class Singleton {
 
+    private int trialId;
+
+
+
 
     private static Singleton instance;
 
@@ -49,5 +53,13 @@ public class Singleton {
 
     public void setFullname(String fullname) {
         this.fullname = fullname;
+    }
+
+    public int getTrialId() {
+        return trialId;
+    }
+
+    public void setTrialId(int trialId) {
+        this.trialId = trialId;
     }
 }

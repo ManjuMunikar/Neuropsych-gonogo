@@ -10,14 +10,14 @@
     <string name="instruction1">Across the task, the rules on what facial \nexpression or emotion to respond to will \nchange, and an instruction screen\n will tell you the new rules.\n\n
         Touch the screen to see the first instruction\n and start a practice session.
 
-    </string><string name="trial_session">Across the task, the rules on what facial expression or emotion to respond to will change,\n and an instruction screen will tell you the new rules.\n\n
+    </string>
+    <string name="trial_session">Across the task, the rules on what facial expression or emotion to respond to will change,\n and an instruction screen will tell you the new rules.\n\n
         Touch the screen to see the first instruction and start a trial session.
     </string>
 
     <string name="instruction2">Touch the screen whenever you see the \nSURPRISED faces. Do not press for other \nfaces, only the SURPRISED faces. \n
         Remember to go as fast as you can \n       without making any mistakes. \n\n
         Touch the screen to start.</string>
-
 
 
     <string name="get_ready1"> Get Ready!! \n\n\n\n\n
