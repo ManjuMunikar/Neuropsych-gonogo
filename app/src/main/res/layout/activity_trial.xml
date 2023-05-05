@@ -17,5 +17,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.469"
-        app:srcCompat="@drawable/trial_plus" />
+        app:srcCompat="@drawable/trialplus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

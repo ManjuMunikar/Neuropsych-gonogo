@@ -15,7 +15,7 @@
         Touch the screen to see the first instruction and start a trial session.
     </string>
 
-    <string name="instruction2">Touch the screen whenever you see the \nSURPRISED faces. Do not press for other \nfaces, only the SURPRISED faces. \n
+    <string name="instruction2">Touch the SCREEN whenever you see the \nSURPRISED faces. Do not touch the screen for\n other faces, only the SURPRISED faces. \n
         Remember to go as fast as you can \n       without making any mistakes. \n\n
         Touch the screen to start.</string>
 
