@@ -4,12 +4,10 @@ public class Singleton {
     private int trialId;
 
 
-
-
     private static Singleton instance;
 
     private String userId;
-    private String fullname;
+    private String fullName;
     private String language = "en";
     private String location = "";
 
@@ -47,12 +45,12 @@ public class Singleton {
         this.location = location;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public int getTrialId() {
