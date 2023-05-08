@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.datagrandeur.gonogo.data.DatabaseHelper;
 import com.example.neuropsych.R;
 
 public class UserActivity extends AppCompatActivity {
@@ -23,9 +24,13 @@ public class UserActivity extends AppCompatActivity {
         final EditText txtUserId = findViewById(R.id.txtUserId);
         final EditText txtFullName = findViewById(R.id.txtFullName);
 
+
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
 
                 if (TextUtils.isEmpty(txtUserId.getText().toString().trim())) {
                     txtUserId.setError("Required!");
