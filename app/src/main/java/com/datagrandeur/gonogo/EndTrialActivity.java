@@ -21,6 +21,8 @@ public class EndTrialActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
+                //or if(Singleton.getInstance().getTrialId()==8);
                 int trialId= Singleton.getInstance().getTrialId();
                 if(trialId ==8){
                     Intent intent= new Intent(getApplicationContext(),ThankYouActivity.class);
