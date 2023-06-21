@@ -23,7 +23,7 @@ public class TrialActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent (getApplicationContext(),ThankYouActivity.class);
+                Intent intent=new Intent (getApplicationContext(),EndTrialActivity.class);
                 startActivity(intent);
             }
         });

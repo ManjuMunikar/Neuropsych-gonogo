@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.neuropsych.R;
 
@@ -23,7 +22,6 @@ public class UserActivity extends AppCompatActivity {
         Button nextButton = findViewById(R.id.btnShowInstruction);
         final EditText txtUserId = findViewById(R.id.txtUserId);
         final EditText txtFullName = findViewById(R.id.txtFullName);
-        final TextView txtLoginScreenMessage = findViewById(R.id.txtLoginScreenMessage);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +34,7 @@ public class UserActivity extends AppCompatActivity {
                 } else {
 
                     Singleton.getInstance().setUserId(txtUserId.getText().toString().trim());
-                    Singleton.getInstance().setFullname(txtFullName.getText().toString().trim());
+                    Singleton.getInstance().setFullName(txtFullName.getText().toString().trim());
 
                     Intent intent = new Intent(getApplicationContext(), IntroActivity.class);
                     startActivity(intent);
