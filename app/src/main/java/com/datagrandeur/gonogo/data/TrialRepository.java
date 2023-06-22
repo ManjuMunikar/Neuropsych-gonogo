@@ -23,8 +23,8 @@ public class TrialRepository {
                     TrialRepository.COLUMN_NAME_TRIAL_CODE + " TEXT UNIQUE, " +
                     TrialRepository.COLUMN_NAME_GO_FACE + " TEXT, " +
                     TrialRepository.COLUMN_NAME_NO_GO_FACE + " TEXT, " +
-                    TrialRepository.COLUMN_NAME_GO_FACE_COUNT + " TEXT, " +
-                    TrialRepository.COLUMN_NAME_NO_GO_FACE_COUNT + " TEXT " +
+                    TrialRepository.COLUMN_NAME_GO_FACE_COUNT + " INTEGER, " +
+                    TrialRepository.COLUMN_NAME_NO_GO_FACE_COUNT + " INTEGER " +
                     ")";
 
     public static long insert(Trial trial, SQLiteDatabase db){
