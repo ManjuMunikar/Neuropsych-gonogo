@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.neuropsych'
+    namespace 'com.datagrandeur.gonogo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.neuropsych"
+        applicationId "com.datagrandeur.gonogo"
         minSdk 26
         targetSdk 33
         versionCode 1

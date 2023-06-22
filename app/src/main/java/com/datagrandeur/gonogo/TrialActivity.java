@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.neuropsych.R;
-
 public class TrialActivity extends AppCompatActivity {
 
     @Override

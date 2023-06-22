@@ -11,7 +11,6 @@ import android.widget.EditText;
 
 import com.datagrandeur.gonogo.data.DatabaseHelper;
 import com.datagrandeur.gonogo.data.User;
-import com.example.neuropsych.R;
 
 public class UserActivity extends AppCompatActivity {
 

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.neuropsych.R;
 
 public class InstructionActivity2 extends AppCompatActivity {
 
