@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.neuropsych.R;
-
 public class StartActivity extends AppCompatActivity {
 
     @Override
