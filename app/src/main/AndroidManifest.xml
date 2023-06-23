@@ -51,10 +51,6 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".MenuActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".UserActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
