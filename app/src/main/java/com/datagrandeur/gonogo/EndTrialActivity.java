@@ -22,7 +22,7 @@ public class EndTrialActivity extends AppCompatActivity {
 
                 //or if(Singleton.getInstance().getTrialId()==8);
                 int trialId= Singleton.getInstance().getTrialId();
-                if(trialId ==8){
+                if(trialId ==9){
                     Intent intent= new Intent(getApplicationContext(),ThankYouActivity.class);
                     startActivity(intent);
 

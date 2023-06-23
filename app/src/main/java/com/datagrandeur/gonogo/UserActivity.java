@@ -39,6 +39,7 @@ public class UserActivity extends AppCompatActivity {
                     txtFullName.setError("Required!");
                 } else {
 
+                    Singleton.getInstance().setTrialId(1);
                     Singleton.getInstance().setUserId(txtUserId.getText().toString().trim());
                     Singleton.getInstance().setFullName(txtFullName.getText().toString().trim());
 

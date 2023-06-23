@@ -18,30 +18,44 @@
 
         <activity
             android:name=".SettingActivity"
+            android:exported="false"
             android:screenOrientation="landscape" />
 
         <activity
             android:name=".AdminActivity"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"/>
+
         <activity
             android:name=".EndTrialActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".ThankYouActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".StartActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".TrialActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".InstructionActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".GetReadyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".InstructionActivity1"
             android:exported="false"
