@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.datagrandeur.gonogo.data.DatabaseHelper;
 import com.datagrandeur.gonogo.data.User;
@@ -48,6 +49,15 @@ public class UserActivity extends AppCompatActivity {
                     dbHelper.insertUser(user, dbHelper.getDb());
 
                 }
+            }
+        });
+
+        ImageButton imgBtnSetting= findViewById(R.id.imgBtnSetting);
+        imgBtnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(UserActivity.this, AdminActivity.class);
+                startActivity(intent);
             }
         });
     }

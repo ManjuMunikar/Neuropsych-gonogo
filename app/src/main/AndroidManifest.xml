@@ -12,41 +12,49 @@
         android:theme="@style/Theme.Neuropsych"
         tools:targetApi="31">
         <activity
-            android:name="com.datagrandeur.gonogo.EndTrialActivity"
+            android:name=".SettingActivity"
             android:exported="false" />
         <activity
-            android:name="com.datagrandeur.gonogo.ThankYouActivity"
+            android:name=".AdminActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".EndTrialActivity"
             android:exported="false" />
         <activity
-            android:name="com.datagrandeur.gonogo.StartActivity"
+            android:name=".ThankYouActivity"
             android:exported="false" />
         <activity
-            android:name="com.datagrandeur.gonogo.TrialActivity"
+            android:name=".StartActivity"
             android:exported="false" />
         <activity
-            android:name="com.datagrandeur.gonogo.InstructionActivity2"
+            android:name=".TrialActivity"
             android:exported="false" />
         <activity
-            android:name="com.datagrandeur.gonogo.GetReadyActivity"
+            android:name=".InstructionActivity2"
             android:exported="false" />
         <activity
-            android:name="com.datagrandeur.gonogo.InstructionActivity1"
+            android:name=".GetReadyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstructionActivity1"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.IntroActivity"
+            android:name=".IntroActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.MenuActivity"
+            android:name=".MenuActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.UserActivity"
+            android:name=".UserActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
