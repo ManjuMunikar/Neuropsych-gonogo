@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.datagrandeur.gonogo.data.DatabaseHelper;
+
 public class TrialActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +22,9 @@ public class TrialActivity extends AppCompatActivity {
         btnTrial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
 
                 Intent intent=new Intent (getApplicationContext(),EndTrialActivity.class);
                 startActivity(intent);
