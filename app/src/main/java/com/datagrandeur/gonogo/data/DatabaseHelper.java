@@ -34,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(UserRepository.CREATE);
         db.execSQL(StimulusTable.CREATE);
 
-        this.insertTrial(new Trial(1, "Practice", "practice", "Surprise", "Neutral", 5, 5), db);
+        this.insertTrial(new Trial(1, "Practice", "practice", "Surprised", "Neutral", 5, 5), db);
         this.insertTrial(new Trial(2, "Trial 1", "trial_1", "Happy", "Neutral", 20, 10), db);
         this.insertTrial(new Trial(3, "Trial 2", "trial_2", "Fearful", "Neutral", 20, 10), db);
         this.insertTrial(new Trial(4, "Trial 3", "trial_3", "Sad", "Neutral", 20, 10), db);
@@ -77,10 +77,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.insertStimulus(new Stimulus( "neutralboy4.jpg", "Neutral","global"), db);
         this.insertStimulus(new Stimulus( "neutralboy5.jpg", "Neutral","global"), db);
         this.insertStimulus(new Stimulus( "neutralgirl1.jpg", "Neutral","global"), db);
-        this.insertStimulus(new Stimulus( "neurtalgirl2.jpg", "Neutral","global"), db);
-        this.insertStimulus(new Stimulus( "neurtalgirl3.jpg", "Neutral","global"), db);
-        this.insertStimulus(new Stimulus( "neurtalgirl4.jpg", "Neutral","global"), db);
-        this.insertStimulus(new Stimulus( "neurtalgirl5.jpg", "Neutral","global"), db);
+        this.insertStimulus(new Stimulus( "neutralgirl2.jpg", "Neutral","global"), db);
+        this.insertStimulus(new Stimulus( "neutralgirl3.jpg", "Neutral","global"), db);
+        this.insertStimulus(new Stimulus( "neutralgirl4.jpg", "Neutral","global"), db);
+        this.insertStimulus(new Stimulus( "neutralgirl5.jpg", "Neutral","global"), db);
 
         this.insertStimulus(new Stimulus( "happyboy1.jpg", "Happy","global"), db);
         this.insertStimulus(new Stimulus( "happyboy2.jpg", "Happy","global"), db);
@@ -104,16 +104,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.insertStimulus(new Stimulus( "sadgirl4.jpg", "Sad","global"), db);
         this.insertStimulus(new Stimulus( "sadgirl5.jpg", "Sad","global"), db);
 
-        this.insertStimulus(new Stimulus( "surpriseboy1.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surpriseboy2.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surpriseboy3.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surpriseboy4.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surpriseboy5.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprisegirl1.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprisegirl2.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprisegirl3.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprisegirl4.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprisegirl5.jpg", "Surprise","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedboy1.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedboy2.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedboy3.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedboy4.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedboy5.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedgirl1.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedgirl2.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedgirl3.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedgirl4.jpg", "Surprised","global"), db);
+        this.insertStimulus(new Stimulus( "surprisedgirl5.jpg", "Surprised","global"), db);
 
 
     }
