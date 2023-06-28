@@ -1,8 +1,15 @@
 package com.datagrandeur.gonogo.data;
 
+import static androidx.fragment.app.FragmentManager.TAG;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -27,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(UserRepository.CREATE);
         db.execSQL(StimulusTable.CREATE);
 
-        this.insertTrial(new Trial(1, "Practice", "practice", "Surprised", "Neutral", 5, 5), db);
+        this.insertTrial(new Trial(1, "Practice", "practice", "Surprise", "Neutral", 5, 5), db);
         this.insertTrial(new Trial(2, "Trial 1", "trial_1", "Happy", "Neutral", 20, 10), db);
         this.insertTrial(new Trial(3, "Trial 2", "trial_2", "Fearful", "Neutral", 20, 10), db);
         this.insertTrial(new Trial(4, "Trial 3", "trial_3", "Sad", "Neutral", 20, 10), db);
@@ -97,11 +104,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.insertStimulus(new Stimulus( "sadgirl4.jpg", "Sad","global"), db);
         this.insertStimulus(new Stimulus( "sadgirl5.jpg", "Sad","global"), db);
 
-        this.insertStimulus(new Stimulus( "surprise1.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprise2.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprise3.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprise4.jpg", "Surprise","global"), db);
-        this.insertStimulus(new Stimulus( "surprise5.jpg", "Surprise","global"), db);
+        this.insertStimulus(new Stimulus( "surpriseboy1.jpg", "Surprise","global"), db);
+        this.insertStimulus(new Stimulus( "surpriseboy2.jpg", "Surprise","global"), db);
+        this.insertStimulus(new Stimulus( "surpriseboy3.jpg", "Surprise","global"), db);
+        this.insertStimulus(new Stimulus( "surpriseboy4.jpg", "Surprise","global"), db);
+        this.insertStimulus(new Stimulus( "surpriseboy5.jpg", "Surprise","global"), db);
         this.insertStimulus(new Stimulus( "surprisegirl1.jpg", "Surprise","global"), db);
         this.insertStimulus(new Stimulus( "surprisegirl2.jpg", "Surprise","global"), db);
         this.insertStimulus(new Stimulus( "surprisegirl3.jpg", "Surprise","global"), db);
@@ -128,4 +135,74 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public long insertUser( User user, SQLiteDatabase db){
         return UserRepository.insert(user,db);
     }
+
+
+    @SuppressLint({"RestrictedApi"})
+    public List<String> getStimuluses (String category, String location, int limit) {
+
+        String CONFIG_SELECT_QUERY =
+                String.format("SELECT substr(filename, 0, instr(filename,\".\")) AS filename FROM "+ StimulusTable.TABLE_NAME + " WHERE %s = ? AND %s = ? ORDER BY random() limit " + limit, StimulusTable.COLUMN_NAME_CATEGORY, StimulusTable.COLUMN_NAME_LOCATION);
+
+        // "getReadableDatabase()" and "getWriteableDatabase()" return the same object (except under low
+        // disk space scenarios)
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(CONFIG_SELECT_QUERY, new String[]{ ""+category,""+location });
+
+        List<String> stimuli = new ArrayList<>();
+
+        try {
+
+            while (cursor.moveToNext()) {
+
+                String filename = cursor.getString(0);
+                stimuli.add(filename);
+
+            }
+        } catch (Exception e) {
+            Log.d(TAG, "Error while trying to get posts from database");
+        } finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+
+
+        return stimuli;
+    }
+
+    @SuppressLint({"Range", "RestrictedApi"})
+    public Trial getConfig (int trailId) {
+
+        String CONFIG_SELECT_QUERY =
+                String.format("SELECT * FROM "+ TrialRepository.TABLE_NAME + " WHERE %s = ? LIMIT 1", TrialRepository.COLUMN_NAME_TRIAL_ID);
+
+        // "getReadableDatabase()" and "getWriteableDatabase()" return the same object (except under low
+        // disk space scenarios)
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(CONFIG_SELECT_QUERY, new String[]{ ""+trailId });
+
+        Trial trial = null;
+
+        try {
+            if (cursor.moveToFirst()) {
+                int id = cursor.getInt(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_TRIAL_ID));
+                String goFace = cursor.getString(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_GO_FACE));
+                String noGoFace = cursor.getString(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_NO_GO_FACE));
+                String trialCode = cursor.getString(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_TRIAL_CODE));
+                String trialName = cursor.getString(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_TRIAL_NAME));
+                int goFaceCount = cursor.getInt(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_GO_FACE_COUNT));
+                int noGoFaceCount = cursor.getInt(cursor.getColumnIndex(TrialRepository.COLUMN_NAME_NO_GO_FACE_COUNT));
+
+                trial = new Trial(id,trialName,trialCode, goFace, noGoFace,goFaceCount, noGoFaceCount);
+            }
+        } catch (Exception e) {
+            Log.d(TAG, "Error while trying to get posts from database");
+        } finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+        return trial;
+    }
+
 }
