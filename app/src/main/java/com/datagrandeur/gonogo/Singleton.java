@@ -9,7 +9,7 @@ public class Singleton {
     private String userId;
     private String fullName;
     private String language = "en";
-    private String location = "";
+    private String location = "global";
 
     public static Singleton getInstance() {
         if (instance == null)
