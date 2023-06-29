@@ -3,6 +3,7 @@ public class Singleton {
 
     private int trialId;
 
+    private String trialName;
 
     private static Singleton instance;
 
@@ -59,5 +60,14 @@ public class Singleton {
 
     public void setTrialId(int trialId) {
         this.trialId = trialId;
+    }
+
+
+    public String getTrialName() {
+        return trialName;
+    }
+
+    public void setTrialName(String trialName) {
+        this.trialName = trialName;
     }
 }

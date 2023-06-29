@@ -13,6 +13,8 @@ import android.widget.ImageButton;
 import com.datagrandeur.gonogo.data.DatabaseHelper;
 import com.datagrandeur.gonogo.data.User;
 
+import java.security.Signature;
+
 public class UserActivity extends AppCompatActivity {
 
     @Override
