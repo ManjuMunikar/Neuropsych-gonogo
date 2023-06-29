@@ -26,6 +26,11 @@ public class EndTrialActivity extends AppCompatActivity {
                     Intent intent= new Intent(getApplicationContext(),ThankYouActivity.class);
                     startActivity(intent);
 
+                }else if(trialId==1){
+                    trialId++;
+                    Singleton.getInstance().setTrialId(trialId);
+                    Intent intent= new Intent(getApplicationContext(), GameStartActivity.class);
+                    startActivity(intent);
                 }else{
                     trialId++;
                     Singleton.getInstance().setTrialId(trialId);
