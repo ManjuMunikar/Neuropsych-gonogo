@@ -18,6 +18,7 @@ import com.datagrandeur.gonogo.data.DatabaseHelper;
 import com.datagrandeur.gonogo.data.Trial;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -41,11 +42,13 @@ public class TrialActivity extends AppCompatActivity {
         DatabaseHelper db = new DatabaseHelper(this);
         Trial trial = db.getConfig(Singleton.getInstance().getTrialId());
 
+        List<String> goFaces = db.getStimuluses(trial.getGoFace(), Singleton.getInstance().getLocation() ,trial.getGoFaceCount());
+        List<String> noGOFaces = db.getStimuluses(trial.getNoGoFace(), Singleton.getInstance().getLocation() ,trial.getNoGoFaceCount());
 
-        stimuli.addAll(db.getStimuluses(trial.getGoFace(), Singleton.getInstance().getLocation() ,trial.getGoFaceCount()));
-        stimuli.addAll(db.getStimuluses(trial.getNoGoFace(), Singleton.getInstance().getLocation() ,trial.getNoGoFaceCount()));
+        stimuli.addAll(resizeList(db.getStimuluses(trial.getGoFace(), Singleton.getInstance().getLocation(),trial.getGoFaceCount()),trial.getGoFaceCount() ));
+        stimuli.addAll(resizeList(db.getStimuluses(trial.getNoGoFace(), Singleton.getInstance().getLocation() ,trial.getNoGoFaceCount()),trial.getNoGoFaceCount()));
 
-
+        Collections.shuffle(stimuli);
 
         btnTrial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +70,7 @@ public class TrialActivity extends AppCompatActivity {
 
         startTimer();
     }
+
 
     private void startTimer() {
         timer = new Timer();
@@ -106,5 +110,17 @@ public class TrialActivity extends AppCompatActivity {
             timer = null;
         }
     }
+
+    private List<String> resizeList(List<String> strings, int size) {
+
+        List<String > strList = new ArrayList<>();
+        while(strList.size()<size){
+            strList.addAll(strings);
+        }
+
+        return strList.subList(0,size-1);
+
+    }
+
 
 }
