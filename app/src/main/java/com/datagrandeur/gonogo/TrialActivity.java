@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -54,21 +55,15 @@ public class TrialActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                System.out.println("Button pressed");
 
-                if(currentImageIndex >=stimuli.size()){
-                    currentImageIndex = 0;
-                    Intent intent = new Intent(getApplicationContext(), EndTrialActivity.class);
-                    finishAffinity();
-                    startActivity(intent);
-                }else {
-                    showNextImage();
-                    currentImageIndex++;
-                }
 
             }
         });
 
         startTimer();
+
+
     }
 
 
@@ -86,13 +81,31 @@ public class TrialActivity extends AppCompatActivity {
                             finishAffinity();
                             startActivity(intent);
                         }else {
-                            showNextImage();
-                            currentImageIndex++;
+
+                            new CountDownTimer(1000, 1000) {
+
+                                public void onTick(long millisUntilFinished) {
+                                    showNextImage();
+                                }
+
+                                public void onFinish() {
+                                    currentImageIndex++;
+
+                                    if(currentImageIndex >= stimuli.size()) {
+                                        btnTrial.setImageResource(R.drawable.endplus);
+                                    }else{
+                                        btnTrial.setImageResource(R.drawable.trial_plus);
+                                    }
+
+                                }
+                            }.start();
+
                         }
+
                     }
                 });
             }
-        }, 3000, 3000);
+        }, 4000, 4000);
     }
 
     @SuppressLint("RestrictedApi")
