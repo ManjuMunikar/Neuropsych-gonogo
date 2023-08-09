@@ -11,39 +11,62 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Neuropsych"
         tools:targetApi="31">
+
         <activity
-            android:name="com.datagrandeur.gonogo.ThankYouActivity"
-            android:exported="false" />
+            android:name=".GameStartActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
-            android:name="com.datagrandeur.gonogo.StartActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.datagrandeur.gonogo.TrialActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.datagrandeur.gonogo.InstructionActivity2"
-            android:exported="false" />
-        <activity
-            android:name="com.datagrandeur.gonogo.GetReadyActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.datagrandeur.gonogo.InstructionActivity1"
+            android:name=".DataExportActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.IntroActivity"
+            android:name=".SettingActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.MenuActivity"
+            android:name=".AdminActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.UserActivity"
+            android:name=".EndTrialActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.datagrandeur.gonogo.MainActivity"
+            android:name=".ThankYouActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".TrialActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".InstructionActivity2"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GetReadyActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".InstructionActivity1"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

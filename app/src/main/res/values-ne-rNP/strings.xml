@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Neuropsych - Impulsivity</string>
+    <string name="app_name">ALIVE - Go/NoGO</string>
     <string name="user_id">प्रयोगकर्ता ID</string>
     <string name="full_name">पुरा नाम</string>
     <string name="register">दर्ता गर्नुहोस्</string>
+    <string name="intro">यो खेलमा तिमीले धेरै थरिको feelings  झल्किने अनुहारहरु देख्नेछौ। तिमीले Screen मा लेखिएको feelings  झल्किने अनुहार देखेको बेलामा मात्र screen मा थिच्नु पर्नेछ भने अरु अनुहार देखिंदा थिच्नु पर्ने छैन। खेल सुरु गर्न screen मा थिच ।</string>
+    <string name="instruction1">"यो खेल भित्र कुन feelings झल्किने अनुहारलाई के गर्ने भन्ने कुरा फरक फरक हुन सक्छ । त्यसैले तिमीले screen मा दिएको जानकारी अनुसार  खेल खेल्नु पर्नेछ ।  \n\n खेल Practice गर्न स्क्रिनमा थिच। "</string>
+    <string name="instruction2">"%s अनुहार देख्ने बित्तिकै screen मा थिच। %s अनुहार बाहेक अरु अनुहार आउँदा केहि पनि नगर। गल्ती नगरिकन जति सक्दो छिटो Screen मा थिच ।  खेल Start गर्न Screen मा थिच।  "</string>
+    <string name="get_ready1">Ready होउ ।</string>
+    <string name="game_start">"खेल सुरु हुन लागेको छ त्यसैले खेल सुरु गर्नका लागी Screen मा  थिच।  "</string>
+    <string name="get_ready2">"खेल Start गर्न Screen मा थिच। "</string>
+    <string name="thank_you">धन्यवाद ।</string>
+    <string name="Surprised">"अचम्म मानेको (SURPRISED) "</string>
+    <string name="Sad">दुःखी अनुहार (SAD)</string>
+    <string name="Happy">खुशी भएको (HAPPY)</string>
+    <string name="Fearful">डराएको अनुहार (FEARFUL)</string>
+    <string name="Neutral">कुनै भावना बिनाको सामान्य अनुहार (NEUTRAL)</string>
+    <string name="Angry">रिसाएको अनुहार (ANGRY)</string>
+    <string name="Incorrect">गलत</string>
+    <string name="Correct">सही</string>
+
+
 </resources>

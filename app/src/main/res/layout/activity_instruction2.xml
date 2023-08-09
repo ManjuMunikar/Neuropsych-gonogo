@@ -18,19 +18,19 @@
             android:id="@+id/btnInstructionActivity2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg"
+            android:background="@color/white"
             android:layout_gravity="center"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textViewInstruction2"
+            android:id="@+id/tvInstruction2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:textSize="24sp"
-            android:text="@string/textViewInstruction2"
+            android:textSize="30sp"
+            android:text="@string/instruction2"
             android:textColor="@color/purple" />
     </FrameLayout>
 

@@ -19,19 +19,30 @@
             android:id="@+id/btnGetReady"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg"
+            android:background="@color/white"
             android:layout_gravity="center"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
-
         <TextView
-            android:id="@+id/textViewGetReady"
+            android:id="@+id/tvGetReady"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
+            android:paddingTop="100dp"
             android:gravity="center"
-            android:textSize="32sp"
-            android:text="@string/textViewGetReady"
+            android:textSize="40sp"
+            android:text="@string/get_ready1"
+            android:textColor="@color/purple" />
+
+        <TextView
+            android:id="@+id/tvGetReady2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingTop="150dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:text="@string/get_ready2"
             android:textColor="@color/purple" />
     </FrameLayout>
 

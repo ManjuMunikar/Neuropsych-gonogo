@@ -4,31 +4,46 @@
     <string name="full_name">Full Name</string>
     <string name="register">Register</string>
 
+    <string name="intro">In this game, you will see a series of faces one at a time.\nTouch the screen when you see a certain\n kind of facial expression, but to\n do Not touch at other times. \n\n
+    Touch the screen to continue.</string>
 
-    <string name="btnIntro"></string>
-    <string name="textViewIntro">In this task, you will see a series of faces one at a time. Touch the screen when you see \n a certain kind of facial expression, but to Not touch at other times. \n\n
-    Touch the screen to start</string>
-
-    <string name="btnInstruction1"></string>
-    <string name="textViewInstruction1">Across the task, the rules on what facial expression or emotion to respond to will change,\n and an instruction screen will tell you the new rules.\n\n
-        Touch the screen to see the first instruction and start a pratice session.
+    <string name="instruction1">Across the game, the rules on what facial \nexpression or emotion to respond to will \nchange, and an instruction screen\n will tell you the new rules.\n\n
+        Touch the screen to see the first instruction\n and start a practice session.
 
     </string>
-    <string name="textViewInstruction2">Touch the screen whenever you see the SURPRISED faces. Do not press for other faces, only the SURPRISED faces. \n\n
-    Remember to go as fast as you can without making any mistakes. \n\n
+    <string name="trial_session">Across the task, the rules on what facial expression or emotion to respond to will change,\n and an instruction screen will tell you the new rules.\n\n
+        Touch the screen to see the first instruction and start a trial session.
+    </string>
 
-    Touch the screen to start.</string>
+    <string name="instruction2">Touch the SCREEN whenever you see the \n %s faces. Do not touch the screen for\n other faces, only the %s faces. \n
+        Remember to go as fast as you can \n       without making any mistakes. \n\n
+        Touch the screen to start.</string>
 
 
-    <string name="textViewGetReady"> Get Ready \n\n
-    Touch the screen when you are ready.
+    <string name="get_ready1"> Get Ready!! \n\n\n\n\n</string>
+
+    <string name="game_start"> The game is about to start!! \n\n\n\n\n
 
     </string>
-    <string name="textViewStart"> The test is about to start \n
+    <string name="get_ready2">Touch the screen to start.</string>
+    <string name="start"> The test is about to start \n\n
     Touch the screen to start.</string>
 
-    <string name="textViewThankYou"> Thank You!! \n\n
+    <string name="thank_you"> Thank You!! \n\n
     Touch the screen to exit.</string>
+
+    <string name="Surprised">SURPRISED</string>
+    <string name="Angry">ANGRY</string>
+
+    <string name="Sad">SAD</string>
+
+    <string name="Happy">HAPPY</string>
+
+    <string name="Fearful">FEARFUL</string>
+
+    <string name="Neutral">NEUTRAL</string>
+    <string name="Correct">Correct</string>
+    <string name="Incorrect">Incorrect</string>
 
 
 </resources>

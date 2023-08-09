@@ -18,19 +18,18 @@
             android:id="@+id/btnIntro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg"
-            android:contentDescription="@string/btnIntro"
+            android:background="@color/white"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textViewIntro"
+            android:id="@+id/tvIntro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
-            android:textSize="24sp"
-            android:text="@string/textViewIntro"
+            android:textSize="30sp"
+            android:text="@string/intro"
             android:textColor="@color/purple" />
 
 
