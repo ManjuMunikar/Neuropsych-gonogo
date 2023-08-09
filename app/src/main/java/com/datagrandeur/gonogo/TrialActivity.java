@@ -78,9 +78,9 @@ public class TrialActivity extends AppCompatActivity {
 //                }
             }
         });
+        btnTrial.setImageResource(R.drawable.startplus);
+        new Handler().postDelayed(this::startTimer, 1000);
 
-
-        startTimer();
 
     }
 
@@ -99,7 +99,7 @@ public class TrialActivity extends AppCompatActivity {
     }
 
     private void waitForInput() {
-        btnTrial.setImageResource(R.drawable.trial_plus);
+        btnTrial.setImageResource(R.drawable.startplus);
         new Handler().postDelayed(this::showAnswer, 1000);
     }
 
