@@ -17,4 +17,8 @@
     <string name="Fearful">डराएको अनुहार (FEARFUL)</string>
     <string name="Neutral">कुनै भावना बिनाको सामान्य अनुहार (NEUTRAL)</string>
     <string name="Angry">रिसाएको अनुहार (ANGRY)</string>
+    <string name="Incorrect">गलत</string>
+    <string name="Correct">सही</string>
+
+
 </resources>

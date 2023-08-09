@@ -42,6 +42,8 @@
     <string name="Fearful">FEARFUL</string>
 
     <string name="Neutral">NEUTRAL</string>
+    <string name="Correct">Correct</string>
+    <string name="Incorrect">Incorrect</string>
 
 
 </resources>
