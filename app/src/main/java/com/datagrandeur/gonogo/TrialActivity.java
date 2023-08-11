@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.datagrandeur.gonogo.data.DatabaseHelper;
+import com.datagrandeur.gonogo.data.Response;
 import com.datagrandeur.gonogo.data.Trial;
 
 import java.util.ArrayList;
@@ -33,7 +34,14 @@ public class TrialActivity extends AppCompatActivity {
     private String packageName;
     private Trial trial;
 
+    long startTime;
+    long endTime;
+
+    long responseTime;
+
     private boolean tapped = false;
+
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +52,7 @@ public class TrialActivity extends AppCompatActivity {
         btnTrial = findViewById(R.id.btnTrial);
         packageName = this.getPackageName();
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        db = new DatabaseHelper(this);
         trial = db.getConfig(Singleton.getInstance().getTrialId());
 
         stimuli.addAll(resizeList(db.getStimuluses(trial.getGoFace(), Singleton.getInstance().getLocation(), trial.getGoFaceCount()), trial.getGoFaceCount()));
@@ -58,6 +66,7 @@ public class TrialActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 tapped = true;
+                responseTime = System.currentTimeMillis();
 
 //                if (currentImageIndex >= 0) {
 //                    System.out.println(trial.getGoFace());
@@ -92,6 +101,7 @@ public class TrialActivity extends AppCompatActivity {
             tvMessage.setText("");
             tapped = false;
             currentImageIndex++;
+            startTime = System.currentTimeMillis();
             showNextImage();
             new Handler().postDelayed(this::waitForInput, 500);
 
@@ -113,7 +123,39 @@ public class TrialActivity extends AppCompatActivity {
                 tvMessage.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.Red));
             }
         }
+        endTime = System.currentTimeMillis();
+        int sequence = currentImageIndex+1;
+        Response response = new Response(Singleton.getInstance().getUserId(),
+                trial.getTrialName(),
+                trial.getGoFace(),
+                trial.getNoGoFace(),
+                sequence,
+                stimuli.get(currentImageIndex),
+                ""+tapped,
+                ""+startTime,
+                ""+endTime,
+               ""+ responseTime,
+                 isCorrect()
+                );
+
+        db.insertResponse(response, db.getDb());
+
+
         new Handler().postDelayed(this::startTimer, 500);
+    }
+
+    private boolean isCorrect() {
+        boolean correct = false;
+        if(tapped && stimuli.get(currentImageIndex).toLowerCase().contains(trial.getGoFace().toLowerCase())) {
+            correct = true;
+        } else if(!tapped && stimuli.get(currentImageIndex).toLowerCase().contains(trial.getGoFace().toLowerCase())){
+            correct = false;
+        } else if(tapped && stimuli.get(currentImageIndex).toLowerCase().contains(trial.getNoGoFace().toLowerCase())) {
+            correct = false;
+        } else{
+            correct = true;
+        }
+        return correct;
     }
 
     private boolean isInputCorrect() {
