@@ -14,7 +14,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private final SQLiteDatabase db;
-    public static final String DATABASE_NAME = "gonogo.db";
+    public static final String DATABASE_NAME = "gonogo-1.db";
     public static final int DATABASE_VERSION = 1;
 
     public DatabaseHelper(Context context) {
@@ -33,6 +33,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(TrialResponseRepository.CREATE);
         db.execSQL(UserRepository.CREATE);
         db.execSQL(StimulusTable.CREATE);
+        db.execSQL(ResponseTable.CREATE);
+
 
         this.insertTrial(new Trial(1, "Practice", "practice", "Surprised", "Neutral", 5, 5), db);
         this.insertTrial(new Trial(2, "Trial 1", "trial_1", "Happy", "Neutral", 20, 10), db);
@@ -275,6 +277,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return trial;
+    }
+
+    public long insertResponse(Response response, SQLiteDatabase db){
+        return ResponseTable.insert(response, db);
     }
 
 }
