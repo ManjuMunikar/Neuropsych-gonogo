@@ -33,7 +33,7 @@ final class ResponseTable implements BaseColumns {
                     ResponseTable.COLUMN_NAME_NOGOFACE + " TEXT, " +
                     ResponseTable.COLUMN_NAME_SEQUENCE_NUMBER + " TEXT, " +
                     ResponseTable.COLUMN_NAME_STIMULI + " TEXT," +
-                    ResponseTable.COLUMN_NAME_USER_RESPONSE + " TEXT," +
+                    ResponseTable.COLUMN_NAME_USER_RESPONSE + " BOOLEAN," +
                     ResponseTable.COLUMN_NAME_START + " TEXT," +
                     ResponseTable.COLUMN_NAME_END + " TEXT," +
                     ResponseTable.COLUMN_RESPONSE_TIME + " TEXT ," +
@@ -53,7 +53,7 @@ final class ResponseTable implements BaseColumns {
         values.put(ResponseTable.COLUMN_NAME_END, response.getEnd());
         values.put(ResponseTable.COLUMN_RESPONSE_TIME, response.getResponseTime());
         values.put(ResponseTable.COLUMN_NAME_SEQUENCE_NUMBER, response.getSequenceNumber());
-        values.put(ResponseTable.COLUMN_NAME_USER_RESPONSE, response.getUserInput());
+        values.put(ResponseTable.COLUMN_NAME_USER_RESPONSE, response.isUserInput());
         values.put(ResponseTable.COLUMN_NAME_CORRECT, response.isCorrect());
 
         return db.insert(ResponseTable.TABLE_NAME, null, values);

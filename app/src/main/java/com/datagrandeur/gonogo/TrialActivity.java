@@ -131,7 +131,7 @@ public class TrialActivity extends AppCompatActivity {
                 trial.getNoGoFace(),
                 sequence,
                 stimuli.get(currentImageIndex),
-                ""+tapped,
+                tapped,
                 ""+startTime,
                 ""+endTime,
                ""+ responseTime,

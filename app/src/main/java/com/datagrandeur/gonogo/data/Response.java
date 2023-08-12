@@ -13,13 +13,13 @@ public class Response {
     private String category;
     private String stimulus;
     private String position;
-    private String userInput;
+    private boolean userInput;
     private String start;
     private String end;
     private String responseTime;
     private boolean correct;
 
-    public Response(String userId, String trialName, String goFace, String noGoFace, int sequenceNumber, String stimulus, String userInput, String start, String end, String responseTime, boolean correct) {
+    public Response(String userId, String trialName, String goFace, String noGoFace, int sequenceNumber, String stimulus, boolean userInput, String start, String end, String responseTime, boolean correct) {
         this.userId = userId;
         this.trialName = trialName;
         this.start = start;
@@ -82,13 +82,6 @@ public class Response {
         this.position = position;
     }
 
-    public String getUserInput() {
-        return userInput;
-    }
-
-    public void setUserInput(String userInput) {
-        this.userInput = userInput;
-    }
 
 
 
@@ -138,5 +131,13 @@ public class Response {
 
     public void setTrialName(String trialName) {
         this.trialName = trialName;
+    }
+
+    public boolean isUserInput() {
+        return userInput;
+    }
+
+    public void setUserInput(boolean userInput) {
+        this.userInput = userInput;
     }
 }
