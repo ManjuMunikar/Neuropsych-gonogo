@@ -22,24 +22,24 @@ import android.widget.TextView;
 
 import com.datagrandeur.gonogo.data.DatabaseHelper;
 import com.datagrandeur.gonogo.utils.CSVWriter;
+import com.datagrandeur.gonogo.utils.DateUtils;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class DataExportActivity extends AppCompatActivity {
-
+    TextView tvDataExport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_export);
 
 
-        TextView tvDataExport = findViewById(R.id.tvDataExport);
+        tvDataExport= findViewById(R.id.tvDataExport);
         setupActionBar();
-        tvDataExport.setText("Data Exporting In Progress");
         export();
-        tvDataExport.setText("Data export completed");
     }
     private void export() {
 
@@ -49,7 +49,10 @@ public class DataExportActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(DataExportActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
         }
 
+        tvDataExport.setText("Data Exporting In Progress");
+
         Log.w("Data Export", "Created file");
+
         Cursor result = null;
 
         File file = new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "gonogo.csv");
@@ -58,7 +61,7 @@ public class DataExportActivity extends AppCompatActivity {
             CSVWriter csvWriter = new CSVWriter(new FileWriter(file));
             SQLiteDatabase db = dbHelper.getReadableDatabase();
             result= db.rawQuery("SELECT * FROM response", null);
-            csvWriter.writeNext(result.getColumnNames());
+            csvWriter.writeNext(appendArray(result.getColumnNames(), new String[] {"start_datetime", "end_datetime", "user_response_datetime","user_response_duration"}));
             while(result.moveToNext()){
                 String arrStr[] ={
                         result.getString(0),
@@ -72,8 +75,11 @@ public class DataExportActivity extends AppCompatActivity {
                         result.getString(8),
                         result.getString(9),
                         result.getString(10),
-                        result.getString(11)
-
+                        result.getString(11),
+                        DateUtils.getDate(result.getLong(8)),
+                        DateUtils.getDate(result.getLong(9)),
+                        DateUtils.getDate(result.getLong(10)),
+                        result.getLong(10) > result.getLong(8) ? String.valueOf((result.getLong(10) - result.getLong(8))) :""
                 };
                 csvWriter.writeNext(arrStr);
             }
@@ -81,10 +87,11 @@ public class DataExportActivity extends AppCompatActivity {
             result.close();
 
             Log.i("Data Export", "Created file");
+            tvDataExport.setText("Data export completed");
 
         }catch (IOException e){
             Log.e("Data Export", e.getMessage(), e);
-
+            tvDataExport.setText("Failed to export data.");
         }finally {
             if(result!=null && !result.isClosed()){
                 result.close();
@@ -120,5 +127,21 @@ public class DataExportActivity extends AppCompatActivity {
         }
     }
 
+    public String[] appendArray(String[] array1, String[] array2)
+    {
+        int length1 = array1.length;
+        int length2 = array2.length;
+        int mergedLength = length1 + length2;
+
+        String[] mergedArray = new String[mergedLength];
+
+        // Copying elements from array1
+        System.arraycopy(array1, 0, mergedArray, 0, length1);
+
+        // Copying elements from array2
+        System.arraycopy(array2, 0, mergedArray, length1, length2);
+
+        return mergedArray;
+    }
 }
 

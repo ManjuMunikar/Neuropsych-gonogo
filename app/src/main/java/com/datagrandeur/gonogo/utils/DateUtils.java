@@ -5,9 +5,9 @@ import java.util.Date;
 
 public class DateUtils {
 
-    public static Date getDate(long timeMillis){
+    public static String getDate(long timeMillis){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-        return new Date(timeMillis);
+        return sdf.format(new Date(timeMillis));
     }
 
 }
