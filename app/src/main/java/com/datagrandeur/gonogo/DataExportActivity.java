@@ -61,7 +61,7 @@ public class DataExportActivity extends AppCompatActivity {
             CSVWriter csvWriter = new CSVWriter(new FileWriter(file));
             SQLiteDatabase db = dbHelper.getReadableDatabase();
             result= db.rawQuery("SELECT * FROM response", null);
-            csvWriter.writeNext(appendArray(result.getColumnNames(), new String[] {"start_datetime", "end_datetime", "user_response_datetime","user_response_duration"}));
+            csvWriter.writeNext(appendArray(result.getColumnNames(), new String[] {"start_time", "end_time", "user_input_time","user_input_duration"}));
             while(result.moveToNext()){
                 String arrStr[] ={
                         result.getString(0),
