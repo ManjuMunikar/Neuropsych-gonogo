@@ -16,11 +16,11 @@ final class ResponseTable implements BaseColumns {
     public static final String COLUMN_NAME_GOFACE = "goface";
     public static final String COLUMN_NAME_NOGOFACE = "nogoface";
     public static final String COLUMN_NAME_STIMULI = "stimuli";
-    public static final String COLUMN_NAME_START = "start";
-    public static final String COLUMN_NAME_END = "end";
-    public static final String COLUMN_RESPONSE_TIME = "response_time";
+    public static final String COLUMN_NAME_START_MILLIS = "start_millis";
+    public static final String COLUMN_NAME_END_MILLIS = "end_millis";
+    public static final String COLUMN_USER_INPUT_MILLIS = "user_input_millis";
     public static final String COLUMN_NAME_SEQUENCE_NUMBER = "sequence_number";
-    public static final String COLUMN_NAME_USER_RESPONSE = "user_response";
+    public static final String COLUMN_NAME_USER_INPUT = "user_input";
     public static final String COLUMN_NAME_CORRECT = "correct";
 
 
@@ -33,10 +33,10 @@ final class ResponseTable implements BaseColumns {
                     ResponseTable.COLUMN_NAME_NOGOFACE + " TEXT, " +
                     ResponseTable.COLUMN_NAME_SEQUENCE_NUMBER + " TEXT, " +
                     ResponseTable.COLUMN_NAME_STIMULI + " TEXT," +
-                    ResponseTable.COLUMN_NAME_USER_RESPONSE + " TEXT," +
-                    ResponseTable.COLUMN_NAME_START + " TEXT," +
-                    ResponseTable.COLUMN_NAME_END + " TEXT," +
-                    ResponseTable.COLUMN_RESPONSE_TIME + " TEXT ," +
+                    ResponseTable.COLUMN_NAME_USER_INPUT + " BOOLEAN," +
+                    ResponseTable.COLUMN_NAME_START_MILLIS + " TEXT," +
+                    ResponseTable.COLUMN_NAME_END_MILLIS + " TEXT," +
+                    ResponseTable.COLUMN_USER_INPUT_MILLIS + " TEXT ," +
                     ResponseTable.COLUMN_NAME_CORRECT + " BOOLEAN " +
                     ")";
 
@@ -49,11 +49,11 @@ final class ResponseTable implements BaseColumns {
         values.put(ResponseTable.COLUMN_NAME_STIMULI, response.getStimulus());
         values.put(ResponseTable.COLUMN_NAME_GOFACE, response.getGoFace());
         values.put(ResponseTable.COLUMN_NAME_NOGOFACE, response.getNoGoFace());
-        values.put(ResponseTable.COLUMN_NAME_START, response.getStart() );
-        values.put(ResponseTable.COLUMN_NAME_END, response.getEnd());
-        values.put(ResponseTable.COLUMN_RESPONSE_TIME, response.getResponseTime());
+        values.put(ResponseTable.COLUMN_NAME_START_MILLIS, response.getStartMillis() );
+        values.put(ResponseTable.COLUMN_NAME_END_MILLIS, response.getEndMillis());
+        values.put(ResponseTable.COLUMN_USER_INPUT_MILLIS, response.getUserInputMillis());
         values.put(ResponseTable.COLUMN_NAME_SEQUENCE_NUMBER, response.getSequenceNumber());
-        values.put(ResponseTable.COLUMN_NAME_USER_RESPONSE, response.getUserInput());
+        values.put(ResponseTable.COLUMN_NAME_USER_INPUT, response.isUserInput());
         values.put(ResponseTable.COLUMN_NAME_CORRECT, response.isCorrect());
 
         return db.insert(ResponseTable.TABLE_NAME, null, values);
