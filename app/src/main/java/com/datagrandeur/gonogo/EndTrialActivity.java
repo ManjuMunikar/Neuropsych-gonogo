@@ -15,13 +15,13 @@ public class EndTrialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_end_trial);
         //todo -> add delay
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+
+
 
                 //or if(Singleton.getInstance().getTrialId()==8);
                 int trialId= Singleton.getInstance().getTrialId();
+
+
                 if(trialId ==9){
                     Intent intent= new Intent(getApplicationContext(),ThankYouActivity.class);
                     startActivity(intent);
@@ -37,9 +37,6 @@ public class EndTrialActivity extends AppCompatActivity {
                     Intent intent= new Intent(getApplicationContext(),InstructionActivity2.class);
                     startActivity(intent);
                 }
-
-            }
-        },3000);
     }
 }
 
