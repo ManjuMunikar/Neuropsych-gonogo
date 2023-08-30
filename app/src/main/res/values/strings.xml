@@ -9,13 +9,14 @@
 
     <string name="instruction1">Across the game, the rules on what facial \nexpression or emotion to respond to will \nchange, and an instruction screen\n will tell you the new rules.\n\n
         Touch the screen to see the first instruction\n and start a practice session.
+        \n\n There are two practice session before starting a game.
 
     </string>
     <string name="trial_session">Across the task, the rules on what facial expression or emotion to respond to will change,\n and an instruction screen will tell you the new rules.\n\n
         Touch the screen to see the first instruction and start a trial session.
     </string>
 
-    <string name="instruction2">Touch the SCREEN whenever you see the \n %s faces. Do not touch the screen for\n other faces, only the %s faces. \n
+    <string name="instruction2">%sTouch the SCREEN whenever you see the \n %s faces. Do not touch the screen for\n other faces, only the %s faces. \n
         Remember to go as fast as you can \n       without making any mistakes. \n\n
         Touch the screen to start.</string>
 

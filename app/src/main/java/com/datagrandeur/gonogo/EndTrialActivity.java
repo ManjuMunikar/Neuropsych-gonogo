@@ -22,11 +22,11 @@ public class EndTrialActivity extends AppCompatActivity {
                 int trialId= Singleton.getInstance().getTrialId();
 
 
-                if(trialId ==9){
+                if(trialId ==10){
                     Intent intent= new Intent(getApplicationContext(),ThankYouActivity.class);
                     startActivity(intent);
 
-                }else if(trialId==1){
+                }else if(trialId==2){
                     trialId++;
                     Singleton.getInstance().setTrialId(trialId);
                     Intent intent= new Intent(getApplicationContext(), GameStartActivity.class);

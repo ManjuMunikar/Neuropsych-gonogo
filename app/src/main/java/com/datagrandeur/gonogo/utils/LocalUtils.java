@@ -19,30 +19,20 @@ public class LocalUtils {
     public static String getLanguage(String location) {
         switch (location) {
 
-
             case "global":
                 return "";
 
-            case "ethiopia":
-                return "am";
+            case "colombia":
+                return "es";
 
             case "nepal":
                 return "ne";
 
-            case "bangalore":
-                return "kn";
+            case "afrikaans":
+                return "af";
 
-            case "delhi":
-                return "hi";
-
-            case "guangzhou":
-                return "zh";
-
-            case "beijing":
-                return "zh";
-
-            case "tunisia":
-                return "ar";
+            case "isiXhosa":
+                return "xh";
 
             default:
                 return "";

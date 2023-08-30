@@ -36,8 +36,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(ResponseTable.CREATE);
 
 
-        this.insertTrial(new Trial(1, "Practice1", "practice1", "Surprised", "Neutral", 5, 5), db);
-        this.insertTrial(new Trial(2, "Practice2", "practice2", "Surprised", "Neutral", 5, 5), db);
+        this.insertTrial(new Trial(1, "Practice", "practice1", "Surprised", "Neutral", 5, 5), db);
+        this.insertTrial(new Trial(2, "Practice", "practice2", "Surprised", "Neutral", 5, 5), db);
         this.insertTrial(new Trial(3, "Trial 1", "trial_1", "Happy", "Neutral", 20, 10), db);
         this.insertTrial(new Trial(4, "Trial 2", "trial_2", "Fearful", "Neutral", 20, 10), db);
         this.insertTrial(new Trial(5, "Trial 3", "trial_3", "Sad", "Neutral", 20, 10), db);
