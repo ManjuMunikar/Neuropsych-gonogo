@@ -14,7 +14,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private final SQLiteDatabase db;
-    public static final String DATABASE_NAME = "gonogo_001.db";
+    public static final String DATABASE_NAME = "gonogo_0001.db";
     public static final int DATABASE_VERSION = 1;
 
     public DatabaseHelper(Context context) {
