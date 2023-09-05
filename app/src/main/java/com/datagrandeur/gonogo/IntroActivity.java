@@ -19,7 +19,7 @@ public class IntroActivity extends AppCompatActivity {
         btnIntro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent (getApplicationContext(),InstructionActivity1.class);
+                Intent intent=new Intent (getApplicationContext(),InstructionActivity2.class);
                 startActivity(intent);
             }
         });

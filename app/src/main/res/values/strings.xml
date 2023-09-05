@@ -4,8 +4,10 @@
     <string name="full_name">Full Name</string>
     <string name="register">Register</string>
 
-    <string name="intro">In this game, you will see a series of faces one at a time.\nTouch the screen when you see a certain\n kind of facial expression, but to\n do Not touch at other times. \n\n
-    Touch the screen to continue.</string>
+    <string name="intro">In this game, you will see a series of faces one at a time.
+        \n\nTouch the screen when you see a certain kind of facial expression, but do Not touch at other times.
+        \n\nTouch the screen to continue.
+    </string>
 
     <string name="instruction1">Across the game, the rules on what facial \nexpression or emotion to respond to will \nchange, and an instruction screen\n will tell you the new rules.\n\n
         Touch the screen to see the first instruction\n and start a practice session.
@@ -16,17 +18,20 @@
         Touch the screen to see the first instruction and start a trial session.
     </string>
 
-    <string name="instruction2">%sTouch the SCREEN whenever you see the \n %s faces. Do not touch the screen for\n other faces, only the %s faces. \n
-        Remember to go as fast as you can \n       without making any mistakes. \n\n
-        Touch the screen to start.</string>
+    <string name="instruction2">
+        Tap the screen when you see the %s faces. Don\'t tap the screen for other faces, only the %s faces.
+        \n\nRemember to go as fast as you can without making any mistakes.
+        \n\n%s
+    </string>
 
 
-    <string name="get_ready1"> Get Ready!! \n\n\n\n\n</string>
+    <string name="get_ready1"> Get Ready!\n\n\n\n\n</string>
 
-    <string name="game_start"> The game is about to start!! \n\n\n\n\n
+    <string name="game_start"> The game is about to start! \n\n\n\n\n
 
     </string>
-    <string name="get_ready2">Touch the screen to start.</string>
+    <string name="tap_practice">Tap the screen to start the practice sessions.</string>
+    <string name="get_ready2">Tap the screen to start!</string>
     <string name="start"> The test is about to start \n\n
     Touch the screen to start.</string>
 
@@ -43,8 +48,8 @@
     <string name="Fearful">FEARFUL</string>
 
     <string name="Neutral">NEUTRAL</string>
-    <string name="Correct">Correct</string>
-    <string name="Incorrect">Incorrect</string>
+    <string name="Correct">Correct \u2713</string>
+    <string name="Incorrect">Incorrect X</string>
 
 
 </resources>

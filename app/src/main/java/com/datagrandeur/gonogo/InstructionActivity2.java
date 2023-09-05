@@ -30,11 +30,12 @@ public class InstructionActivity2 extends AppCompatActivity {
             goFace = getString(getGoFaceStringResource(trial));
         }
 
-        String practiceTrialTitle = "";
+        String finalInstruction = "";
         if(trial.getTrialName().equalsIgnoreCase("Practice")){
-            practiceTrialTitle = "Practice Round\n\n";
+            finalInstruction = String.format(instruction, goFace, goFace, getString(R.string.tap_practice));
+        }else{
+            finalInstruction = String.format(instruction, goFace, goFace, getString(R.string.get_ready2));
         }
-        String finalInstruction = String.format(instruction, practiceTrialTitle, goFace, goFace);
         TextView tvInstruction = findViewById(R.id.tvInstruction2);
         tvInstruction.setText(finalInstruction);
         btnInstructionActivity2.setOnClickListener(new View.OnClickListener() {

@@ -29,7 +29,10 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
             android:text="@string/instruction2"
+            android:textAlignment="viewStart"
             android:textColor="@color/purple"
             android:textSize="30sp" />
     </FrameLayout>
