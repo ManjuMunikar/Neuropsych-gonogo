@@ -5,17 +5,17 @@
     <string name="register">Register</string>
 
     <string name="intro">In this game, you will see a series of faces one at a time.
-        \n\nTouch the screen when you see a certain kind of facial expression, but do Not touch at other times.
-        \n\nTouch the screen to continue.
+        \n\nTap the screen when you see a certain kind of facial expression, but do Not touch at other times.
+        \n\nTap the screen to continue.
     </string>
 
     <string name="instruction1">Across the game, the rules on what facial \nexpression or emotion to respond to will \nchange, and an instruction screen\n will tell you the new rules.\n\n
-        Touch the screen to see the first instruction\n and start a practice session.
+        Tap the screen to see the first instruction\n and start a practice session.
         \n\n There are two practice session before starting a game.
 
     </string>
     <string name="trial_session">Across the task, the rules on what facial expression or emotion to respond to will change,\n and an instruction screen will tell you the new rules.\n\n
-        Touch the screen to see the first instruction and start a trial session.
+        Tap the screen to see the first instruction and start a trial session.
     </string>
 
     <string name="instruction2">
@@ -33,7 +33,7 @@
     <string name="tap_practice">Tap the screen to start the practice sessions.</string>
     <string name="get_ready2">Tap the screen to start!</string>
     <string name="start"> The test is about to start \n\n
-    Touch the screen to start.</string>
+    Tap the screen to start.</string>
 
     <string name="thank_you"> Thank You!! \n\n
     Tap the screen to exit.</string>
