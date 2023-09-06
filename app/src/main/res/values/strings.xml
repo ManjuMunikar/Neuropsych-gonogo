@@ -36,7 +36,7 @@
     Touch the screen to start.</string>
 
     <string name="thank_you"> Thank You!! \n\n
-    Touch the screen to exit.</string>
+    Tap the screen to exit.</string>
 
     <string name="Surprised">SURPRISED</string>
     <string name="Angry">ANGRY</string>
@@ -50,6 +50,10 @@
     <string name="Neutral">NEUTRAL</string>
     <string name="Correct">Correct \u2713</string>
     <string name="Incorrect">Incorrect X</string>
+
+    <string name="exitingQuestion">Do you really want to exit?</string>
+    <string name="yes">Yes, I want to exit.</string>
+    <string name="no">No, I don\'t want to exit.</string>
 
 
 </resources>
