@@ -4,4 +4,6 @@
     <string name="user_id">Gebruikers-ID</string>
     <string name="full_name">Volle naam</string>
     <string name="register">Registreer</string>
+    <string name="thank_you">Dankie!! \n\n
+    Tik die skerm om te verlaat.</string>
 </resources>

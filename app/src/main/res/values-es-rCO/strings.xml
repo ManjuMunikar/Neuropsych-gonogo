@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ALIVE - Go/NoGo</string>
-
+    <string name="user_id">Identificación de usuario</string>
+    <string name="full_name">Nombre completo</string>
+    <string name="register">Registro</string>
+    <string name="thank_you"> Gracias!! \n\n
+    Toque la pantalla para salir.</string>
 
     <string name="intro">En este juego verás una serie de caras una a la vez.
         \n\nToca la pantalla cuando veas cierto tipo de expresión facial, pero no la toques en otros momentos.
@@ -21,7 +25,6 @@
     <string name="tap_practice">Toca la pantalla para comenzar las sesiones de práctica.</string>
     <string name="get_ready2">¡Toca la pantalla para empezar!</string>
 
-    <string name="thank_you">Gracias!!!</string>
     <string name="Surprised">SORPRENDIDAS</string>
     <string name="Sad">TRISTES</string>
     <string name="Happy">FELICES</string>
