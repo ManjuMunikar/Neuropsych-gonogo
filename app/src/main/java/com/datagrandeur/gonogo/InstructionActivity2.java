@@ -29,7 +29,13 @@ public class InstructionActivity2 extends AppCompatActivity {
         if(getGoFaceStringResource(trial)>0) {
             goFace = getString(getGoFaceStringResource(trial));
         }
-        String finalInstruction = String.format(instruction, goFace, goFace);
+
+        String finalInstruction = "";
+        if(trial.getTrialName().equalsIgnoreCase("Practice")){
+            finalInstruction = String.format(instruction, goFace, goFace, getString(R.string.tap_practice));
+        }else{
+            finalInstruction = String.format(instruction, goFace, goFace, getString(R.string.get_ready2));
+        }
         TextView tvInstruction = findViewById(R.id.tvInstruction2);
         tvInstruction.setText(finalInstruction);
         btnInstructionActivity2.setOnClickListener(new View.OnClickListener() {
