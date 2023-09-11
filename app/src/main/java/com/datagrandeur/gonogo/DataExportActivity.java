@@ -78,7 +78,7 @@ public class DataExportActivity extends AppCompatActivity {
                         result.getString(11),
                         DateUtils.getDate(result.getLong(8)),
                         DateUtils.getDate(result.getLong(9)),
-                        DateUtils.getDate(result.getLong(10)),
+                        result.getLong(10) > result.getLong(8) ?  DateUtils.getDate(result.getLong(10)): "",
                         result.getLong(10) > result.getLong(8) ? String.valueOf((result.getLong(10) - result.getLong(8))) :""
                 };
                 csvWriter.writeNext(arrStr);
