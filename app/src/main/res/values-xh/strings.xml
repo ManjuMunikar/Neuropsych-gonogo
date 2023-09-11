@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ALIVE - Go/NoGo</string>
+
+    <string name="user_id">Umsebenzisi we-ID (user-ID)</string>
+    <string name="full_name">Igama elipheleleyo</string>
+    <string name="register">Bhalisa</string>
+    <string name="thank_you">Enkosi!!</string>
+
+    <string name="intro">In this game, you will see a series of faces one at a time.
+        \n\nTap the screen when you see a certain kind of facial expression, but do NOT TAP at other times.
+        \n\nTap the screen to continue.
+    </string>
+    <string name="instruction2">
+        Cofa isikrini xa ubona ubuso %s. Sukucofa isikrini xa ufuna obunye ubuso, kuphela %s.
+        \n\nKhumbula ukuhamba ngokukhawuleza kangangoko unako ngaphandle kokwenza naziphi na iimpazamo.
+        \n\n%s
+    </string>
+
+    <string name="get_ready1">Zilungiselele!\n\n\n\n\n</string>
+    <string name="game_start">Umdlalo sele uza kuqalisa!\n\n\n\n\n
+    </string>
+    <string name="tap_practice">Cofa isikrini ukuze uqalise iiseshini zokuziqhelanisa.</string>
+    <string name="get_ready2">Cofa isikrini ukuze uqalise!</string>
+
+    <string name="Surprised">OBUMANGALISAYO</string>
+    <string name="Sad">obu-NXUNGUPHELEYO</string>
+    <string name="Happy">obo-NWABILEYO</string>
+    <string name="Fearful">OBOYIKAYO</string>
+    <string name="Neutral">obu-PHAKATHI NAPHAKATHI.</string>
+    <string name="Angry">obuBUMSINDO</string>
+    <string name="Incorrect">Incorrect X</string>
+    <string name="Correct">Correct \u2713</string>
+
+
+
+</resources>
